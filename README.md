@@ -1,5 +1,5 @@
 # StaticPage to AWS S3
-20260213
+20263618
 
 
 ### 1단계: AWS S3 버킷 설정
