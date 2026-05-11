@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멍냥마켓 - 반려동물 쇼핑몰</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <h1 class="logo">🐾 멍냥마켓</h1>
+            <nav>
+                <button id="cart-btn">
+                    <i class="fas fa-shopping-cart"></i> 장바구니
+                    <span id="cart-count">0</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content container">
+            <div class="hero-text">
+                <h2>우리 아이를 위한<br>최고의 선택</h2>
+                <p>엄선된 프리미엄 사료와 장난감을 만나보세요.</p>
+            </div>
+            <div class="hero-image">
+                 <img src="https://images.unsplash.com/photo-1623387641168-d9803ddd3f35?w=500&h=350&fit=crop" alt="귀여운 강아지와 고양이">
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">전체보기</button>
+            <button class="filter-btn" data-filter="dog">🐶 강아지</button>
+            <button class="filter-btn" data-filter="cat">🐱 고양이</button>
+        </div>
+
+        <div id="product-list" class="product-grid">
+            </div>
+    </main>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>장바구니</h2>
+            <ul id="cart-items">
+                <p class="empty-msg">장바구니가 비어있습니다.</p>
+            </ul>
+            <div class="cart-total">
+                <span>총 결제금액:</span>
+                <span id="total-price">0원</span>
+            </div>
+            <button id="checkout-btn">주문하기</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

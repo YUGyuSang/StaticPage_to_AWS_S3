@@ -1,0 +1,85 @@
+/* ... (이전과 동일한 기본 설정, 헤더 스타일) ... */
+
+/* 기본 설정 */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; }
+body { background-color: #f9f9f9; color: #333; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+header { background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+.header-content { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+.logo { color: #ff6b6b; font-size: 1.5rem; }
+#cart-btn { background-color: #ff6b6b; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+#cart-btn:hover { background-color: #ff4757; }
+#cart-count { background-color: white; color: #ff6b6b; padding: 2px 6px; border-radius: 50%; margin-left: 5px; font-size: 0.8rem; }
+
+
+/* --- 수정된 히어로 배너 섹션 --- */
+.hero {
+    background-color: #ffeaa7;
+    /* 높이 제한을 없애고 내부 콘텐츠에 맞춥니다 */
+    padding: 40px 0; 
+    margin-bottom: 30px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.hero-text h2 { font-size: 2.5rem; margin-bottom: 10px; line-height: 1.2; }
+.hero-text p { font-size: 1.1rem; color: #555; }
+
+/* 배너 이미지 스타일 */
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+/* -------------------------------- */
+
+
+/* 필터 버튼 (이전과 동일) */
+.filters { text-align: center; margin-bottom: 30px; }
+.filter-btn { border: 1px solid #ddd; background: white; padding: 10px 20px; margin: 0 5px; border-radius: 20px; cursor: pointer; transition: 0.2s; }
+.filter-btn.active, .filter-btn:hover { background-color: #ff6b6b; color: white; border-color: #ff6b6b; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 30px; }
+.product-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: transform 0.2s; display: flex; flex-direction: column; }
+.product-card:hover { transform: translateY(-5px); }
+
+
+/* --- 수정된 상품 이미지 스타일 --- */
+.product-img {
+    width: 100%;
+    height: 200px;
+    /* object-fit: cover; 가 핵심입니다. 이미지를 영역에 꽉 차게 자릅니다. */
+    object-fit: cover; 
+    border-bottom: 1px solid #eee;
+}
+/* -------------------------------- */
+
+
+/* ... (이하 상품 정보, 버튼, 모달 스타일은 이전과 동일) ... */
+.product-info { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+.product-info h3 { margin-bottom: 10px; font-size: 1.1rem; }
+.product-info p { color: #888; font-size: 0.9rem; margin-bottom: 15px; }
+.price { font-weight: bold; font-size: 1.2rem; color: #333; margin-top: auto;}
+.add-to-cart-btn { width: 100%; padding: 10px; background-color: #333; color: white; border: none; margin-top: 15px; border-radius: 5px; cursor: pointer; }
+.add-to-cart-btn:hover { background-color: #555; }
+.modal { display: none; position: fixed; z-index: 200; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); }
+.modal-content { background-color: white; margin: 10% auto; padding: 20px; border-radius: 10px; width: 90%; max-width: 500px; position: relative; max-height: 80vh; overflow-y: auto; }
+.close-btn { position: absolute; right: 20px; top: 15px; font-size: 28px; cursor: pointer; }
+#cart-items { list-style: none; margin: 20px 0; border-top: 1px solid #eee; }
+.cart-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; }
+.remove-btn { background: #ff6b6b; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-size: 0.8rem; }
+.cart-total { text-align: right; font-size: 1.2rem; font-weight: bold; margin-top: 20px; padding-top: 20px; border-top: 2px solid #333; }
+#checkout-btn { width: 100%; padding: 15px; background-color: #ff6b6b; color: white; border: none; border-radius: 5px; font-size: 1rem; margin-top: 20px; cursor: pointer; }
+
+/* 반응형: 화면이 좁을 때 배너 이미지 위치 조정 */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
